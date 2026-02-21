@@ -1,0 +1,230 @@
+body {
+    background-color: rgb(230, 228, 227);
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  animation: fadeIn 1.5s ease forwards;
+}
+
+header h1 {
+    font-weight: bolder;
+    color: rgb(236, 126, 78);
+    font-size: 50px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* article */
+article {
+    height: auto; /* גמיש */
+    margin: 190px 10px 130px 10px; /* ריווח צדדי קטן יותר */
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+/* כפתורים */
+#btnA, #btnB, #btnC {
+    opacity: 0.7;
+    background-color: rgb(255, 94, 0);
+    width: 400px;
+    max-width: 90vw; /* למנוע חריגה במובייל */
+    height: 70px;
+    color: black;
+    border: none;
+    font-size: 20px;
+    margin: 20px auto; /* מרכז הכפתור */
+    display: block;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+a{
+text-decoration-line: none;
+}
+#btnA:hover, #btnB:hover, #btnC:hover {
+    background-color: rgb(230, 227, 227);
+    color: rgb(255, 94, 0);
+}
+
+#btnC:hover {
+    font-size: 16px;
+}
+
+#of {
+    background-color: rgb(170, 163, 163);
+    font-weight: bolder;
+    color: white;
+    width: 80px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 10px auto;
+    display: block;
+}
+
+#of:hover {
+    color: rgb(170, 163, 163);
+    background-color: rgb(230, 228, 227);
+}
+
+.h:hover {
+    background-color: rgb(230, 227, 227);
+    color: rgb(255, 94, 0);
+}
+
+div {
+    width: 400px;
+    max-width: 90vw;
+    height: 210px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+#divD {
+    margin: 70px auto 0 auto;
+    max-width: 400px;
+    padding: 0 10px;
+}
+
+#btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 250px;        
+    z-index: 50;
+    position: relative;
+    margin: 80px auto 0 auto;
+    max-width: 400px;
+}
+
+footer {
+    color: rgb(97, 91, 122);
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Popup */
+#popup {
+    display: none;
+    background-color: rgb(230, 227, 227);
+    opacity: 0.9; 
+    width: 90vw;
+    max-width: 700px;
+    height: auto;
+    max-height: 400px;
+    margin: 50px auto;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    text-align: center;
+    border: medium solid rgb(255, 94, 0);
+    font-family: 'Times New Roman', Times, serif;
+    padding: 20px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+#name, #pass {
+    background-color: rgb(213, 207, 207);
+    width: 70%;
+    height: 20px;
+    margin: 10px auto;
+    display: block;
+    padding: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+#input {
+    margin: 75px auto 0 auto;
+    max-width: 400px;
+    padding: 0 10px;
+}
+
+#submit {
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    opacity: 0.8; 
+    background-color: rgb(230, 227, 227);
+    border: 1px solid black;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    margin: 20px auto 0 auto;
+    display: block;
+}
+
+#submit:hover {
+    border: 1px solid rgb(255, 94, 0);
+    background-color: rgb(255, 94, 0);
+}
+
+/* Responsive Media Queries */
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 36px;
+        margin: 15px 10px;
+    }
+
+    #btnA, #btnB, #btnC, div {
+        width: 90vw;
+        height: 60px;
+        font-size: 18px;
+    }
+
+    #divD {
+        margin: 40px auto 0 auto;
+        padding: 0 5px;
+    }
+
+    article {
+        margin: 120px 10px 100px 10px;
+    }
+
+    #btn {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 28px;
+        margin: 10px 5px;
+    }
+
+    #btnA, #btnB, #btnC, div {
+        width: 95vw;
+        height: 50px;
+        font-size: 16px;
+    }
+
+    #divD {
+        margin: 30px auto 0 auto;
+        padding: 0 5px;
+    }
+
+    article {
+        margin: 100px 5px 80px 5px;
+    }
+
+    #btn {
+        height: 180px;
+    }
+}

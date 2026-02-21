@@ -1,0 +1,267 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #faf8ef;
+}
+
+#ttl {
+  display: flex;
+  flex-direction: row;
+  /* margin-bottom: 30px; */
+  padding: 5px;
+  margin-left: 43%;
+  width: 300px;
+  margin-right: 0%;
+}
+
+h1 {
+  margin: 0px;
+  color: rgb(150, 139, 139);
+  font-size: 75px;
+  padding: 15px;
+}
+
+h2 {
+  margin-top: 50px;
+  padding: 7px;
+    /* margin: 0px; */
+  color: rgb(150, 139, 139);
+  font-size: 20px;
+}
+
+img {
+  margin-top: 45px;
+  width: 40px;
+  height: 40px;
+}
+
+table {
+  margin: auto;
+  /* גבול חיצוני של הטבלה */
+  border-collapse: collapse;
+
+
+}
+
+td {
+  width: 100px;
+  /* גודל תא */
+  height: 100px;
+  /* גובה תא */
+  border: 7px solid rgb(187, 173, 173);
+  /* גבול פנימי של התא */
+  font-size: 2.7em;
+  /* גודל פונטים בתא */
+  line-height: 100px;
+  /* יישור אורכי של התוכן בתא */
+  background-color: #eee4da;
+  /* צבע רקע לתא */
+  color: rgb(139, 132, 132);
+  font-weight: bolder;
+}
+
+#gameOver {
+  display: none;
+  background-color: rgb(255, 0, 0);
+  opacity: 0.9;
+  filter: alpha(opacity=50);
+  width: 700px;
+  height: 400px;
+}
+
+#retry,i{  color: rgb(145, 134, 134);
+  background-color: #faf8ef;
+  text-decoration: none;
+  content: "\f2ea";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  
+  border: white, 0px, solid;
+  font-size: 30px;
+ 
+  margin-right: 90%;
+  margin-top: 1%;
+}
+
+#print {
+  content: "\f02f";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  background-color: #faf8ef;
+  border: white, 0px, solid;
+  font-size: 30px;
+  color: rgb(145, 134, 134);
+  margin-right: 90%;
+  margin-top: 1%;
+}
+#audio{
+  content: "\f028";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  background-color: #faf8ef;
+  border: white, 0px, solid;
+  font-size: 30px;
+  color: rgb(145, 134, 134);
+  margin-right: 90%;
+  margin-top: 1%;
+}
+#leaderboardBtn{
+    content: "\f028";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  background-color: #faf8ef;
+  border: white, 0px, solid;
+  font-size: 30px;
+  color: rgb(145, 134, 134);
+  margin-right: 90%;
+  margin-top: 1%;
+}
+h5 {
+  margin: 0%;
+}
+
+p {
+  font-weight: bolder;
+}
+
+#scoree {
+  margin: 10px;
+  width: 100px;
+  /* גודל תא */
+  height: 70px;
+  /* גובה תא */
+  border-radius: 5%;
+  border: 3px solid rgb(187, 173, 173);
+  /* גבול חיצוני של הטבלה */
+  font-size: 20px;
+  /* גודל פונטים בתא */
+  color: #ffffff;
+  line-height: 20px;
+  /* יישור אורכי של התוכן בתא */
+  background-color: rgb(187, 173, 173);
+  /* צבע רקע לתא */
+}
+
+#maxScoree {
+  margin: 10px;
+  width: 100px;
+  /* גודל תא */
+  height: 70px;
+  /* גובה תא */
+  border-radius: 5%;
+  border: 3px solid rgb(187, 173, 173);
+  /* גבול חיצוני של הטבלה */
+  font-size: 20px;
+  /* גודל פונטים בתא */
+  color: #ffffff;
+  line-height: 20px;
+  /* יישור אורכי של התוכן בתא */
+  background-color: rgb(187, 173, 173);
+  /* צבע רקע לתא */
+}
+
+#scores {
+      flex-direction: column;
+    align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin-left: 33%;
+}
+
+.icon{
+  display: flex;
+  flex-direction: row;
+   width: 20px;
+}
+#overlayMessage{
+ display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(150, 150, 150, 0.7);
+
+  }
+  #overlayMessagee{ 
+      color: rgb(255, 255, 255);
+        font-size: 80px;
+  font-weight: bolder;
+  z-index: 9999;
+  padding: 10px;
+  padding: 420px;
+  }
+
+  #retryP{
+    
+     color: rgb(145, 134, 134);
+      background-color: #faf8ef;
+      text-decoration: none;
+      content: "\f2ea";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      
+      border: white, 0px, solid;
+      font-size: 30px;
+      margin-left: 50%;
+      position:absolute;
+    z-index: 10000;
+
+  }
+
+  @media screen and (max-width: 768px) {
+  td {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5em;
+    line-height: 60px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  #ttl {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+
+ 
+
+  .icon {
+    justify-content: center;
+  }
+
+  #leaderboard {
+    width: 90%;
+  }
+}
+
+@keyframes score-bounce {
+  0% { transform: scale(1); color: black; }
+  50% { transform: scale(1.5); color: orange; }
+  100% { transform: scale(1); color: black; }
+}
+
+.score-animate {
+  animation: score-bounce 0.5s ease forwards;
+}
+
+@keyframes popUpFade {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+}
+
+.score-increment {
+  position: absolute;
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(88, 55, 5);
+  animation: popUpFade 1s forwards;
+  pointer-events: none;
+  user-select: none;
+}

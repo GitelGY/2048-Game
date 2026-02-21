@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <title>טבלת שיאים</title>
+  <link rel="stylesheet" href="../css/leaderboard.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #faf8ef;
+      color: #333;
+    }
+
+    table {
+      margin: 30px auto;
+      border-collapse: collapse;
+      width: 80%;
+      max-width: 600px;
+    }
+
+    th, td {
+      border: 1px solid #bbb;
+      padding: 10px;
+    }
+
+    th {
+      background-color: #ffcc99;
+      font-size: 1.2em;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    h1 {
+      color: #cc6600;
+    }
+
+    #backBtn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #ff8000;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #backBtn:hover {
+      background-color: #e67300;
+    }
+  </style>
+</head>
+<body>
+  <h1>🏆 טבלת שיאים</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>מקום</th>
+        <th>שם משתמש</th>
+        <th>ניקוד</th>
+      </tr>
+    </thead>
+    <tbody id="leaderboardBody">
+    </tbody>
+  </table>
+
+  <button id="backBtn" onclick="window.location.href='game.html'">חזרה למשחק</button>
+
+  <script>
+    function loadLeaderboard() {
+      const users = JSON.parse(localStorage.getItem("users") || "[]");
+      users.sort((a, b) => (b.score || 0) - (a.score || 0));
+
+      const tbody = document.getElementById("leaderboardBody");
+      tbody.innerHTML = "";
+
+      users.forEach((user, index) => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${index + 1}</td>
+          <td>${user.username}</td>
+          <td>${user.score || 0}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    loadLeaderboard();
+  </script>
+</body>
+</html>

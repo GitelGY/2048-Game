@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>משחק 2048</title>
+
+    <link rel="stylesheet" href="../css/game.css"> <!-- קישור לדף CSS -->
+    <link rel="stylesheet" href="../lesson6/iconsStock/assets/css/fontawesome/css/all.min.css">
+</head>
+
+<body>
+    <div id="ttl">
+        <h2 id="name"></h2>
+        <img src="../images/logo.png" alt="" srcset="">
+        <h1>2048</h1>
+    </div>
+    <div class="icon">
+        <button id="retry"><i class="fa-solid fa-undo-alt"></i></button>
+
+        <button id="audio">
+            <i id="on" class="fa-solid fa-volume-up" style="display:block"></i>
+            <i id="off" class="fa-solid fa-volume-mute" style="display:none"></i>
+        </button>
+        <button id="print">
+            <i class="fa-solid fa-print"></i>
+        </button>
+        <button id="leaderboardBtn">
+            <i class="fa-solid fa-trophy"></i>
+        </button>
+    </div>
+
+    <table id="table"></table>
+
+    <div id="scores">
+        <div id="scoree">
+            <h5>score</h5>
+            <p id="score">0</p>
+        </div>
+
+        <div id="maxScoree">
+            <h5>max score</h5>
+            <p id="maxScore">0</p>
+        </div>
+    </div>
+
+    <div id="endMessage"> </div>
+    <audio src="" id="aud"></audio>
+    <audio src="" id="win"></audio>
+    <audio src="" id="error"></audio>
+
+     <script src="../js/game.js"></script> 
+
+
+</body>
+
+</html>
